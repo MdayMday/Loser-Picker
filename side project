@@ -1,0 +1,29 @@
+import random 
+y = 0
+x = 0
+students = []
+while (y == 0):
+    print("Insert the indecisve folk:")
+    X1 = input()
+    students.insert(0, X1)
+    print("Is that everyone?\n1. Yes\n2. No")
+    ans = int(input())
+    if (ans == 1):
+        y = 1
+    if (ans == 2):
+        y = 0 
+random.shuffle(students)
+while (x == 0):
+    while (students.index("May") == 0):
+        slit = students.pop(0)
+        students.insert(len(students), slit)
+        print("Slit")
+    print("Those who can't pick a loser:", students)
+    Winner = students.pop(0)
+    print("This person lost:", Winner, "\nIs that acceptable?\n1. Yes\n2. No")
+    ans = int(input())
+    if (ans == 1):
+        x = 1
+    if (ans == 2):
+        x = 0 
+    quit()
